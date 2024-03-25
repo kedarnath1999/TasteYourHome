@@ -12,7 +12,7 @@ passionate home cooks and individuals seeking genuine culinary experiences.
 
 ## Summary of user research
 
-# Taste of Home Platform: Bridging Home Cooks and Consumers
+## Taste of Home Platform: Bridging Home Cooks and Consumers
 
 ## Overview
 
@@ -47,6 +47,7 @@ Our research highlighted several key insights from international students, revea
 
 
 **Complex Task:**  Buyer providing a review
+
 ![image](https://github.com/kedarnath1999/TasteYourHome/assets/38814925/3a823bdf-6f02-4727-8a9c-2fbc585def50)
 
 
