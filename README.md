@@ -38,17 +38,18 @@ Our research highlighted several key insights from international students, revea
 
 **Simple Task**:
 ![image](https://github.com/kedarnath1999/TasteYourHome/assets/38814925/f3c67a16-b370-413a-ab85-7aa3e2199c9e)
-Task Description: Looking for the food to eat and proceeding to order it.
+
+**Task Description:** Looking for the food to eat and proceeding to order it.
 
 **Medium Task:**
 ![image](https://github.com/kedarnath1999/TasteYourHome/assets/38814925/9cb0d3f1-53ed-4d9d-9ba5-5ef275cd32c5)
 
-Task Description: Adding your own dish so that you can sell it to other food enthusiasts just like you.
+**Task Description:** Adding your own dish so that you can sell it to other food enthusiasts just like you.
 
 **Complex Task:**
 ![image](https://github.com/kedarnath1999/TasteYourHome/assets/38814925/10225e0e-76c6-4370-9059-dfc8b81ed5db)
 
-Task Description: Process for you to leave a review about your favorite dish.
+**Task Description:** Process for you to leave a review about your favorite dish.
 
 ## Link to figma file
 https://www.figma.com/file/3nZWcy0uP8kr3pDAvGoCTI/Untitled?type=design&node-id=0-1&mode=design&t=4zqnr35mNSGPR8Wj-0
