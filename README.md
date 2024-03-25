@@ -36,22 +36,22 @@ Our research highlighted several key insights from international students, revea
 
 ## Storyboard for illustrating three different levels of tasks.
 
-**Simple Task**:
-![image](https://github.com/kedarnath1999/TasteYourHome/assets/38814925/f3c67a16-b370-413a-ab85-7aa3e2199c9e)
+**Simple Task**:User orders food from the app 
 
-**Task Description:** Looking for the food to eat and proceeding to order it.
+![image](https://github.com/kedarnath1999/TasteYourHome/assets/38814925/849a91b5-da55-4103-816c-65db95433929)
 
-**Medium Task:**
-![image](https://github.com/kedarnath1999/TasteYourHome/assets/38814925/9cb0d3f1-53ed-4d9d-9ba5-5ef275cd32c5)
 
-**Task Description:** Adding your own dish so that you can sell it to other food enthusiasts just like you.
+**Medium Task:** Registration of home cook 
 
-**Complex Task:**
+![image](https://github.com/kedarnath1999/TasteYourHome/assets/38814925/0e11d31b-da92-49a7-b474-bfd28093ef33)
+
+
+**Complex Task:**  Buyer providing a review
 ![image](https://github.com/kedarnath1999/TasteYourHome/assets/38814925/10225e0e-76c6-4370-9059-dfc8b81ed5db)
 
-**Task Description:** Process for you to leave a review about your favorite dish.
 
 ## Link to figma file
-https://www.figma.com/file/3nZWcy0uP8kr3pDAvGoCTI/Untitled?type=design&node-id=0-1&mode=design&t=4zqnr35mNSGPR8Wj-0
+![image](https://github.com/kedarnath1999/TasteYourHome/assets/38814925/15091c73-f613-4b1e-b9d8-f5741dbd854b)
+
 
 
