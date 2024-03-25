@@ -47,11 +47,10 @@ Our research highlighted several key insights from international students, revea
 
 
 **Complex Task:**  Buyer providing a review
-![image](https://github.com/kedarnath1999/TasteYourHome/assets/38814925/10225e0e-76c6-4370-9059-dfc8b81ed5db)
+![image](https://github.com/kedarnath1999/TasteYourHome/assets/38814925/3a823bdf-6f02-4727-8a9c-2fbc585def50)
 
 
 ## Link to figma file
-![image](https://github.com/kedarnath1999/TasteYourHome/assets/38814925/15091c73-f613-4b1e-b9d8-f5741dbd854b)
-
+https://www.figma.com/file/3nZWcy0uP8kr3pDAvGoCTI/Taste-your-Home---HCI-Project?type=design&node-id=0-1&mode=design
 
 
