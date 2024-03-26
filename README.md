@@ -53,5 +53,6 @@ Our research highlighted several key insights from international students, revea
 
 ## Link to figma file
 static: https://www.figma.com/file/3nZWcy0uP8kr3pDAvGoCTI/Taste-your-Home---HCI-Project?type=design&node-id=0-1&mode=design
-Rendering: [https://www.figma.com/proto/3nZWcy0uP8kr3pDAvGoCTI/Taste-your-Home---HCI-Project?type=design&node-id=37-2&scaling=scale-down&page-id=0%3A1&starting-point-node-id=10%3A319](https://www.figma.com/proto/3nZWcy0uP8kr3pDAvGoCTI/Taste-your-Home---HCI-Project?type=design&node-id=10-319&scaling=scale-down&page-id=0%3A1&starting-point-node-id=10%3A319)https://www.figma.com/proto/3nZWcy0uP8kr3pDAvGoCTI/Taste-your-Home---HCI-Project?type=design&node-id=10-319&scaling=scale-down&page-id=0%3A1&starting-point-node-id=10%3A319
+
+Interactive: [https://www.figma.com/proto/3nZWcy0uP8kr3pDAvGoCTI/Taste-your-Home---HCI-Project?type=design&node-id=37-2&scaling=scale-down&page-id=0%3A1&starting-point-node-id=10%3A319](https://www.figma.com/proto/3nZWcy0uP8kr3pDAvGoCTI/Taste-your-Home---HCI-Project?type=design&node-id=10-319&scaling=scale-down&page-id=0%3A1&starting-point-node-id=10%3A319)https://www.figma.com/proto/3nZWcy0uP8kr3pDAvGoCTI/Taste-your-Home---HCI-Project?type=design&node-id=10-319&scaling=scale-down&page-id=0%3A1&starting-point-node-id=10%3A319
 
