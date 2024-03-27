@@ -1,5 +1,6 @@
 # Project team: Kedarnath, Shrey, Trey
 
+![image](https://github.com/kedarnath1999/TasteYourHome/assets/38814925/a381cb61-272a-4400-9c42-66fa1cfc3c47)
 ![image](https://github.com/kedarnath1999/TasteYourHome/assets/38814925/bbc4901f-e466-4fc9-8831-ff93ddf8c5dc)
 ![image](https://github.com/kedarnath1999/TasteYourHome/assets/38814925/39cc9791-7977-43f1-b92b-758b649af119)
 ![image](https://github.com/kedarnath1999/TasteYourHome/assets/38814925/4e3ec7f3-9087-4d13-b0ae-00c086069c21)
