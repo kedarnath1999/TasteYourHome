@@ -1,13 +1,18 @@
-import { StyleSheet, Text, View, Image } from 'react-native';
-
+import { StyleSheet, Text, View, Image ,TouchableOpacity, ScrollView} from 'react-native';
+import { AntDesign } from '@expo/vector-icons';
 import EditScreenInfo from '../../components/EditScreenInfo';
+import Card from "../../components/Card"
+
+
 
 export default function TabOneScreen() {
   return (
     <View style={styles.container}>
-      <Image style={styles.image} source={{ uri: 'https://notjustdev-dummy.s3.us-east-2.amazonaws.com/food/peperoni.png'}} />
-      <Text style={styles.title}>Veg Pizza</Text>
-      <Text>$12.99</Text>
+      <ScrollView>
+        <Card/>
+        <Card/>
+        <Card/>
+      </ScrollView>
     </View>
   );
 }
@@ -16,7 +21,6 @@ const styles = StyleSheet.create({
   container: {
     backgroundColor:"white",
     padding:10,
-    borderRadius:20
   },
   image: {
     width:'100%',
