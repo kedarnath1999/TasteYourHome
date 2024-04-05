@@ -1,9 +1,11 @@
 import { StyleSheet, Text, View, Image } from 'react-native';
+import { useLocalSearchParams } from 'expo-router';
 
 const Card = () => {
+  const {homeCookId} = useLocalSearchParams()
   return (
     <View>
-        <Text>Produxt List page</Text>
+        <Text>Produxt List page {homeCookId}</Text>
     </View>
   );
 };
