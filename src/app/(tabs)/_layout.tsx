@@ -6,13 +6,15 @@ import { Pressable } from 'react-native';
 import Colors from '../../constants/Colors';
 import { useColorScheme } from '../../components/useColorScheme';
 import { useClientOnlyValue } from '../../components/useClientOnlyValue';
+import { Ionicons } from '@expo/vector-icons';
+
 
 // You can explore the built-in icon families and icons on the web at https://icons.expo.fyi/
 function TabBarIcon(props: {
   name: React.ComponentProps<typeof FontAwesome>['name'];
   color: string;
 }) {
-  return <FontAwesome size={28} style={{ marginBottom: -3 }} {...props} />;
+  return <FontAwesome size={20} style={{ marginBottom: -3 }} {...props} />;
 }
 
 export default function TabLayout() {
@@ -26,11 +28,14 @@ export default function TabLayout() {
         // to prevent a hydration error in React Navigation v6.
         headerShown: useClientOnlyValue(false, true),
       }}>
+
+      <Tabs.Screen name="index" options={{href:null}}/>
       <Tabs.Screen
-        name="index"
+        name="homeCooks"
         options={{
-          title: 'Tab One',
-          tabBarIcon: ({ color }) => <TabBarIcon name="code" color={color} />,
+          title: 'Home Cooks',
+          headerShown:false,
+          tabBarIcon: ({ color }) => <TabBarIcon name="cutlery" color={color} />,
           headerRight: () => (
             <Link href="/modal" asChild>
               <Pressable>
@@ -51,14 +56,14 @@ export default function TabLayout() {
         name="two"
         options={{
           title: 'Tab Two',
-          tabBarIcon: ({ color }) => <TabBarIcon name="code" color={color} />,
+          tabBarIcon: ({ color }) => <Ionicons name="add" size={30} color={color} />,
         }}
       />
       <Tabs.Screen
         name="three"
         options={{
           title: 'Tab Three',
-          tabBarIcon: ({ color }) => <TabBarIcon name="code" color={color} />,
+          tabBarIcon: ({ color }) => <TabBarIcon name="user" color={color} />,
         }}
       />
     </Tabs>

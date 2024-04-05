@@ -4,7 +4,7 @@ import { Link } from 'expo-router';
 
 const Card = ({ product }) => {
   return (
-    <Link href={'/productList'} asChild>
+    <Link href={`/homeCooks/${product.id}`} asChild>
         <Pressable style={styles.card} onPress={()=>console.log("click")}>
         <Image source={{ uri: product.image }} style={styles.image} />
         <View style={styles.details}>
