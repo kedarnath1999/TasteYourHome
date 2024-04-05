@@ -1,18 +1,17 @@
-import { StyleSheet, Text, View, Image ,TouchableOpacity, ScrollView} from 'react-native';
-import { AntDesign } from '@expo/vector-icons';
+import { StyleSheet, Text, View, ScrollView, FlatList} from 'react-native';
 import EditScreenInfo from '../../components/EditScreenInfo';
 import Card from "../../components/Card"
-
+import homeCooks from 'assets/data/homeCooks';
 
 
 export default function TabOneScreen() {
   return (
     <View style={styles.container}>
-      <ScrollView>
-        <Card/>
-        <Card/>
-        <Card/>
-      </ScrollView>
+      <FlatList 
+        data={homeCooks}
+        renderItem={({item}) => <Card product={item}/>}
+        contentContainerStyle={{padding:5}}
+      />
     </View>
   );
 }
@@ -20,7 +19,6 @@ export default function TabOneScreen() {
 const styles = StyleSheet.create({
   container: {
     backgroundColor:"white",
-    padding:10,
   },
   image: {
     width:'100%',

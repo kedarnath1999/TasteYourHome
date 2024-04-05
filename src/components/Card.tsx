@@ -1,15 +1,15 @@
 import { StyleSheet, Text, View, Image ,TouchableOpacity} from 'react-native';
 import { AntDesign } from '@expo/vector-icons';
 
-const Card = ({ imageUri, title, rating, onPress }) => {
+const Card = ({ product }) => {
   return (
-    <TouchableOpacity style={styles.card} onPress={onPress}>
-      <Image source={{ uri: 'https://notjustdev-dummy.s3.us-east-2.amazonaws.com/food/peperoni.png' }} style={styles.image} />
+    <TouchableOpacity style={styles.card} onPress={()=>console.log("click")}>
+      <Image source={{ uri: product.image }} style={styles.image} />
       <View style={styles.details}>
-        <Text style={styles.title}>"title"</Text>
+        <Text style={styles.title}>{product.name}</Text>
         <View style={styles.ratingContainer}>
           <AntDesign name="star" size={24} color="gold" />
-          <Text style={styles.rating}>4.3</Text>
+          <Text style={styles.rating}>{product.rating}</Text>
         </View>
       </View>
     </TouchableOpacity>
