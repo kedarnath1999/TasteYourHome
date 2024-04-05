@@ -1,18 +1,21 @@
-import { StyleSheet, Text, View, Image ,TouchableOpacity} from 'react-native';
+import { StyleSheet, Text, View, Image ,TouchableOpacity, Pressable} from 'react-native';
 import { AntDesign } from '@expo/vector-icons';
+import { Link } from 'expo-router';
 
 const Card = ({ product }) => {
   return (
-    <TouchableOpacity style={styles.card} onPress={()=>console.log("click")}>
-      <Image source={{ uri: product.image }} style={styles.image} />
-      <View style={styles.details}>
-        <Text style={styles.title}>{product.name}</Text>
-        <View style={styles.ratingContainer}>
-          <AntDesign name="star" size={24} color="gold" />
-          <Text style={styles.rating}>{product.rating}</Text>
+    <Link href={'/productList'} asChild>
+        <Pressable style={styles.card} onPress={()=>console.log("click")}>
+        <Image source={{ uri: product.image }} style={styles.image} />
+        <View style={styles.details}>
+            <Text style={styles.title}>{product.name}</Text>
+            <View style={styles.ratingContainer}>
+            <AntDesign name="star" size={24} color="gold" />
+            <Text style={styles.rating}>{product.rating}</Text>
+            </View>
         </View>
-      </View>
-    </TouchableOpacity>
+        </Pressable>
+    </Link>
   );
 };
 
