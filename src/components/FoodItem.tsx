@@ -1,12 +1,16 @@
 import React, { useState } from 'react';
 import { View, Text, Image, TouchableOpacity, StyleSheet } from 'react-native';
 import { AntDesign } from '@expo/vector-icons';
+import { useCart } from 'src/providers/CartProvider';
 
 const FoodItem = ({ item }) => {
     const [itemCount, setItemCount] = useState(0);
+    const {addItems} = useCart()
+
 
   const incrementCount = () => {
     setItemCount(prevCount => prevCount + 1);
+    addItems(item)
   };
 
   const decrementCount = () => {
