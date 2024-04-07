@@ -3,162 +3,77 @@ import { View, Text, Image, TouchableOpacity, StyleSheet } from 'react-native';
 import { AntDesign } from '@expo/vector-icons';
 import { useCart } from 'src/providers/CartProvider';
 
-const FoodItem = ({ item }) => {
+const FoodItem = ({ product }) => {
     const [itemCount, setItemCount] = useState(0);
-    const {addItems} = useCart()
+    const {addItems,items} = useCart()
 
 
   const incrementCount = () => {
-    setItemCount(prevCount => prevCount + 1);
-    addItems(item)
+    // setItemCount(prevCount => prevCount + 1);
+    addItems(product)
   };
 
-  const decrementCount = () => {
-    setItemCount(prevCount => (prevCount > 0 ? prevCount - 1 : 0));
-  };
 
   return (
-    <View style={styles.container}>
-      {/* Tag and Title */}
-      <View style={styles.header}>
-        <Text style={styles.tag}>{item.tag}</Text>
-        <Text style={styles.title}>{item.title}</Text>
+    <View style={styles.card}>
+      {/* Food Image */}
+      <Image source={{ uri: product.imageUri }} style={styles.image} />
+      {/* Container for Title and Price */}
+      <View style={styles.contentContainer}>
+        <Text style={styles.title}>{product.title}</Text>
+        <Text style={styles.price}>${product.price}</Text>
       </View>
-
-      {/* Image */}
-      <Image source={{ uri: item.imageUri }} style={styles.image} />
-
-      {/* Ratings and Price */}
-      <View style={styles.details}>
-        <View style={styles.ratingsContainer}>
-          <AntDesign name="star" size={16} color="#FFD700" />
-          <Text style={styles.ratings}>{item.ratings}</Text>
-        </View>
-        <Text style={styles.price}>${item.price}</Text>
-      </View>
-
-      {/* Description */}
-      <Text style={styles.description}>{item.description}</Text>
-
-      {/* Add Button */}
-      <View style={styles.footer}>
-        <Text style={styles.itemCount}>{itemCount}</Text>
-        <View style={styles.buttonContainer}>
-          <TouchableOpacity style={styles.removeButton} onPress={decrementCount}>
-            <AntDesign name="minus" size={16} color="white" />
-            <Text style={styles.buttonText}>REMOVE</Text>
-          </TouchableOpacity>
-          <TouchableOpacity style={styles.addButton} onPress={incrementCount}>
-            <Text style={styles.buttonText}>ADD</Text>
-            <AntDesign name="plus" size={16} color="white" />
-          </TouchableOpacity>
-        </View>
-      </View>
+      {/* Add to Cart Button */}
+      <TouchableOpacity style={styles.button} onPress={incrementCount}>
+        <Text style={styles.buttonText}>Add to Cart</Text>
+      </TouchableOpacity>
     </View>
   );
 };
 
 const styles = StyleSheet.create({
-  container: {
-    backgroundColor: '#fff',
-    borderRadius: 10,
-    overflow: 'hidden',
-    marginVertical: 8,
-    elevation: 2,
-    shadowColor: 'black',
-    shadowOffset: { width: 0, height: 2 },
-    shadowOpacity: 0.1,
-    shadowRadius: 2,
-  },
-  header: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    justifyContent: 'space-between',
-    padding: 10,
-    backgroundColor: '#FFF1F0', // Choose a background color similar to the tag
-  },
-  tag: {
-    color: '#D9534F', // Color for the 'Bestseller' tag
-    fontWeight: 'bold',
-  },
-  title: {
-    fontWeight: 'bold',
-    fontSize: 18,
-    flex: 1, // Ensure title can expand and push ratings to the edge
-  },
-  image: {
-    width: '100%',
-    height: 150,
-  },
-  details: {
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    padding: 10,
-  },
-  ratingsContainer: {
-    flexDirection: 'row',
-    alignItems: 'center',
-  },
-  ratings: {
-    marginLeft: 4,
-    fontSize: 14,
-  },
-  price: {
-    fontWeight: 'bold',
-    fontSize: 16,
-  },
-  description: {
-    paddingHorizontal: 10,
-    color: '#686868', // Subdued text color for the description
-    fontSize: 14,
-  },
-  buttonContainer: {
-    flexDirection: 'row',
-    justifyContent: 'flex-end', // Align buttons to the right
-    alignItems: 'center',
-  },
-  removeButton: {
-    flexDirection: 'row',
-    justifyContent: 'center',
-    alignItems: 'center',
-    paddingVertical: 10,
-    paddingHorizontal: 20,
-    backgroundColor: '#CCCCCC', // A greyish color for the remove button
-    borderBottomLeftRadius: 10, // Match the container's border radius
-    marginRight: 2, // Spacing between remove and add button
-  },
-  addButton: {
-    flexDirection: 'row',
-    justifyContent: 'center',
-    alignItems: 'center',
-    paddingVertical: 10,
-    paddingHorizontal: 20,
-    backgroundColor: '#D9534F', // A reddish color for the add button
-    borderBottomRightRadius: 10, // Match the container's border radius
-    marginLeft: 2, // Spacing between remove and add button
-  },
-  buttonText: {
-    color: 'white',
-    fontWeight: 'bold',
-    marginLeft: 4, // Space between icon and text
-  },
-  footer:{
-    flexDirection:'row',
-    display:'flex',
-    justifyContent:'space-between',
-    alignContent:"center"
-  },
-  itemCount:{
-    marginLeft:20,
-    fontWeight:"bold",
-    fontSize: 16, 
-    marginRight: 16,
-  },
-  separator: {
-    marginVertical: 30,
-    height: 1,
-    width: '80%',
-  },
-});
+    card: {
+      backgroundColor: '#FFFFFF',
+      borderRadius: 8,
+      overflow: 'hidden',
+      shadowColor: '#000',
+      shadowOffset: { width: 0, height: 2 },
+      shadowOpacity: 0.23,
+      shadowRadius: 2.62,
+      elevation: 4,
+      marginBottom: 20,
+    },
+    image: {
+      width: '100%',
+      height: 200,
+    },
+    contentContainer: {
+      padding: 16,
+    },
+    title: {
+      fontSize: 18,
+      fontWeight: 'bold',
+      marginBottom: 8,
+    },
+    price: {
+      fontSize: 16,
+      color: '#666',
+      marginBottom: 16,
+    },
+    button: {
+      backgroundColor: '#FF6347', // Tomato color
+      paddingVertical: 12,
+      paddingHorizontal: 20,
+      marginHorizontal: 16,
+      marginBottom: 16,
+      alignItems: 'center',
+      borderRadius: 20,
+    },
+    buttonText: {
+      color: '#FFFFFF',
+      fontSize: 16,
+      fontWeight: 'bold',
+    },
+  });
 
 export default FoodItem;

@@ -13,8 +13,8 @@ const foodList = () => {
 
   return (
     <ScrollView contentContainerStyle={styles.container}>
-      {foodItems.map((item) => (
-        <FoodItem key={item.id} item={item} />
+      {foodItems.map((product) => (
+        <FoodItem key={product.id} product={product} />
       ))}
     </ScrollView>
   );

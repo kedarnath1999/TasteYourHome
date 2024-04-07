@@ -8,6 +8,16 @@ const CartProvider = ({children}) => {
     const [items,setItems] = useState([]);
 
     const addItems = (product) => {
+
+        const exsistingItem = items.find(
+            (item) => item.product === product
+        );
+
+        if(exsistingItem){
+            updateQuantity(exsistingItem.id,1)
+            return
+        }
+
         const newCartItem = {
             id: randomUUID(),
             product,
@@ -23,16 +33,14 @@ const CartProvider = ({children}) => {
             return (item.id !== itemId ? item: {...item,quantity: item.quantity+amount})
         })
         .filter((item) => item.quantity > 0)
-        // setItems(items.map((item) => {
-        //     item.id !== itemId ? item: {...item,quantity: item.quantity+amount}
-        // }))
-        console.log(updatedItems)
         setItems(updatedItems)
     }
 
+    const totalCost = items.reduce((sum, items) => sum + (items.product.price * items.quantity), 0);
+
 
     return(
-        <CartContext.Provider value={{items, addItems,updateQuantity}}>
+        <CartContext.Provider value={{items, addItems, updateQuantity, totalCost}}>
             {children}
         </CartContext.Provider>
     )
