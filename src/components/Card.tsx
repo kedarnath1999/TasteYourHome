@@ -1,10 +1,13 @@
 import { StyleSheet, Text, View, Image ,TouchableOpacity, Pressable} from 'react-native';
 import { AntDesign } from '@expo/vector-icons';
 import { Link } from 'expo-router';
+import { useSegments } from 'expo-router';
 
 const Card = ({ product }) => {
+  const segments = useSegments();
+
   return (
-    <Link href={`/homeCooks/${product.id}`} asChild>
+    <Link href={`/${segments[0]}/homeCooks/${product.id}`} asChild>
         <Pressable style={styles.card} onPress={()=>console.log("click")}>
         <Image source={{ uri: product.image }} style={styles.image} />
         <View style={styles.details}>
