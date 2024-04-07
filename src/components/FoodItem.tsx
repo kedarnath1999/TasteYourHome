@@ -153,7 +153,12 @@ const styles = StyleSheet.create({
     fontWeight:"bold",
     fontSize: 16, 
     marginRight: 16,
-  }
+  },
+  separator: {
+    marginVertical: 30,
+    height: 1,
+    width: '80%',
+  },
 });
 
 export default FoodItem;

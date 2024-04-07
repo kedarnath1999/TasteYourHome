@@ -7,14 +7,13 @@ import CartListItem from 'src/components/CartListItem';
 
 export default function Cart() {
   const {items} = useCart()
-  console.log(items)
   return (
-    <View >
+    <View style={styles.container}>
       <FlatList 
         data={items}
         renderItem={({item}) => <CartListItem cartItem={item}/>}
+        contentContainerStyle={{padding:10, gap:20}}
       />
-      <Text>jjjjj</Text>
       <StatusBar style={Platform.OS === 'ios' ? 'light' : 'auto'} />
     </View>
   );
@@ -23,8 +22,6 @@ export default function Cart() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    alignItems: 'center',
-    justifyContent: 'center',
   },
   title: {
     fontSize: 20,
