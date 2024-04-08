@@ -10,7 +10,7 @@ export default function homeCooksLayout() {
             <Stack.Screen 
               name="[homeCookId]"
               options={{
-                title: 'Home Cooks',
+                title: 'Menu List',
                 headerRight: () => (
                   <Link href="/(admin)/homeCooks/create" asChild>
                     <Pressable>
