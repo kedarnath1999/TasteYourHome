@@ -6,31 +6,13 @@ import Colors from "src/constants/Colors";
 
 export default function homeCooksLayout() {
     return (
-        <Stack
-        screenOptions={{
-            // title: 'Home Cooks',
-            headerRight: () => (
-              <Link href="/cart" asChild>
-                <Pressable>
-                  {({ pressed }) => (
-                    <FontAwesome
-                      name="plus-square-o"
-                      size={25}
-                      color={Colors.light.text}
-                      style={{ marginRight: 15, opacity: pressed ? 0.5 : 1 }}
-                    />
-                  )}
-                </Pressable>
-              </Link>
-            ),
-          }}
-        >
+        <Stack>
             <Stack.Screen 
-              name="index"
+              name="[homeCookId]"
               options={{
                 title: 'Home Cooks',
                 headerRight: () => (
-                  <Link href="/cart" asChild>
+                  <Link href="/(admin)/homeCooks/create" asChild>
                     <Pressable>
                       {({ pressed }) => (
                         <FontAwesome
