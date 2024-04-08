@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { View, Text, Image, TouchableOpacity, StyleSheet } from 'react-native';
+import { Link } from 'expo-router';
 import { AntDesign } from '@expo/vector-icons';
 import { useCart } from 'src/providers/CartProvider';
 
@@ -36,10 +37,12 @@ const AdminFoodItem = ({ product }) => {
       <Text style={styles.description}>{product.description}</Text>
 
       {/* Add Button */}
-      <TouchableOpacity style={styles.addButton} onPress={incrementCount}>
-        <Text style={styles.addButtonText}>Edit</Text>
-        <AntDesign name="edit" size={16} color="white" />
-      </TouchableOpacity>
+      <Link href={`/(admin)/homeCooks/create?id=${product.id}`} asChild>
+        <TouchableOpacity style={styles.addButton} onPress={incrementCount}>
+            <Text style={styles.addButtonText}>Edit</Text>
+            <AntDesign name="edit" size={16} color="white" />
+        </TouchableOpacity>
+      </Link>
     </View>
   );
 };
