@@ -1,11 +1,9 @@
 import { View, Text, StyleSheet, Image, Pressable } from 'react-native';
 import React from 'react';
 import Colors from '../constants/Colors';
-import { CartItem } from '../types';
 import { Link } from 'expo-router';
 import { FontAwesome } from '@expo/vector-icons';
 import { useCart } from '../providers/CartProvider';
-
 
 
 const CartListItem = ({ cartItem }) => {
@@ -13,14 +11,14 @@ const CartListItem = ({ cartItem }) => {
   return (
     <View style={styles.container}>
       <Image
-        source={{ uri: cartItem.imageUri  }}
+        source={{ uri: cartItem.product.imageUri  }}
         style={styles.image}
         resizeMode="contain"
       />
       <View style={{ flex: 1 }}>
-        <Text style={styles.title}>{cartItem.title}</Text>
+        <Text style={styles.title}>{cartItem.product.title}</Text>
         <View style={styles.subtitleContainer}>
-          <Text style={styles.price}>${cartItem.price}</Text>
+          <Text style={styles.price}>${cartItem.product.price}</Text>
         </View>
       </View>
       <View style={styles.quantitySelector}>

@@ -3,7 +3,7 @@ import { View, Text, Image, TouchableOpacity, StyleSheet } from 'react-native';
 import { AntDesign } from '@expo/vector-icons';
 import { useCart } from 'src/providers/CartProvider';
 
-const FoodItem = ({ product }) => {
+const AdminFoodItem = ({ product }) => {
     const {addItems,items} = useCart()
 
 
@@ -37,8 +37,8 @@ const FoodItem = ({ product }) => {
 
       {/* Add Button */}
       <TouchableOpacity style={styles.addButton} onPress={incrementCount}>
-        <Text style={styles.addButtonText}>ADD</Text>
-        <AntDesign name="plus" size={16} color="white" />
+        <Text style={styles.addButtonText}>Edit</Text>
+        <AntDesign name="edit" size={16} color="white" />
       </TouchableOpacity>
     </View>
   );
@@ -115,4 +115,4 @@ const styles = StyleSheet.create({
     },
   });
 
-export default FoodItem;
+export default AdminFoodItem;
