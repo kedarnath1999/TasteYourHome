@@ -43,10 +43,11 @@ export default function TabLayout() {
         }}
       />
       <Tabs.Screen
-        name="two"
+        name="orders"
         options={{
-          title: 'Tab Two',
-          tabBarIcon: ({ color }) => <Ionicons name="add" size={30} color={color} />,
+          title: 'Orders',
+          headerShown:false,
+          tabBarIcon: ({ color }) => <Ionicons name="list" size={30} color={color} />,
         }}
       />
       <Tabs.Screen
