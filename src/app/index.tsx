@@ -12,6 +12,9 @@ const Index = () => {
       <Link href={'/(admin)'} asChild>
           <Button title="Admin" onPress={() => {}} />
       </Link>
+      <Link href={'/sign-in'} asChild>
+          <Button title="sign-in" onPress={() => {}} />
+      </Link>
     </View>
   );
 };
