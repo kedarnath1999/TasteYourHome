@@ -1,14 +1,21 @@
-import { View, Text, TextInput, StyleSheet, TouchableOpacity } from 'react-native';
+import { View, Text, TextInput, StyleSheet, TouchableOpacity,Alert } from 'react-native';
 import React, { useState } from 'react';
 import Colors from '../../constants/Colors';
 import { Link, Stack } from 'expo-router';
+import {supabase} from '../../lib/supabase'
+
 
 const SignInScreen = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const [loading,setLoading] = useState(false)
 
-  const handleSignIn = () => {
 
+  const handleSignIn = async () => {
+    setLoading(true)
+    const {error} = await supabase.auth.signInWithPassword({email,password})
+    if(error) Alert.alert(error.message)
+    setLoading(false)
   }
 
   return (
@@ -32,7 +39,7 @@ const SignInScreen = () => {
         secureTextEntry
       />
 
-      <TouchableOpacity style={styles.checkoutButton} onPress={handleSignIn}>
+      <TouchableOpacity style={styles.checkoutButton} disabled={loading} onPress={handleSignIn}>
         <Text style={styles.checkoutButtonText}>Sign In</Text>
         </TouchableOpacity>
       <Link href="/sign-up" style={styles.textButton}>
@@ -71,7 +78,7 @@ const styles = StyleSheet.create({
     bottom: 20, // Raise the button up 20 pixels from the bottom
     left: 0,
     right: 0,
-    backgroundColor: '#1E90FF', // A prominent button color
+    backgroundColor: Colors.light.tint, // A prominent button color
     padding: 15,
     borderRadius: 5,
     alignItems: 'center',

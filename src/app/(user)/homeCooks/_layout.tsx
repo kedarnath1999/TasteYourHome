@@ -9,6 +9,10 @@ export default function homeCooksLayout() {
         <Stack
         screenOptions={{
             // title: 'Home Cooks',
+            // headerStyle: {
+            //   backgroundColor: Colors.light.tint, // Set your desired color here
+            // },
+            headerTintColor:Colors.light.text,
             headerRight: () => (
               <Link href="/cart" asChild>
                 <Pressable>
@@ -25,7 +29,7 @@ export default function homeCooksLayout() {
             ),
           }}
         >
-            <Stack.Screen name="index" options={{title:'Home cooks'}}/>
+            <Stack.Screen name="index" options={{title:'Taste Your Home'}}/>
         </Stack>
     )
 }
