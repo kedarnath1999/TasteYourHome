@@ -33,7 +33,7 @@ export default function TabLayout() {
       <Tabs.Screen
         name="homeCooks"
         options={{
-          title: 'Home Cooks',
+          title: 'Home Cook',
           headerShown:false,
           tabBarIcon: ({ color }) => <TabBarIcon name="cutlery" color={color} />,
         }}

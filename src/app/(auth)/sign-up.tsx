@@ -76,7 +76,7 @@ const styles = StyleSheet.create({
     bottom: 20, // Raise the button up 20 pixels from the bottom
     left: 0,
     right: 0,
-    backgroundColor: '#1E90FF', // A prominent button color
+    backgroundColor: Colors.light.tint, // A prominent button color
     padding: 15,
     borderRadius: 5,
     alignItems: 'center',

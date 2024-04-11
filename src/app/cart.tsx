@@ -1,8 +1,10 @@
 import React from 'react';
 import { StyleSheet, TouchableOpacity, FlatList, View, Text, Platform } from 'react-native';
+import { Link } from 'expo-router';
 import { StatusBar } from 'expo-status-bar';
 import { useCart } from 'src/providers/CartProvider';
 import CartListItem from 'src/components/CartListItem';
+import Colors from 'src/constants/Colors';
 
 export default function Cart() {
   const { items, totalCost} = useCart();
@@ -25,9 +27,11 @@ export default function Cart() {
     <View style={styles.totalCostContainer}>
       <Text style={styles.totalCostText}>Total Cost: ${totalCost.toFixed(2)}</Text>
     </View>
-    <TouchableOpacity style={styles.checkoutButton} onPress={handleCheckout}>
-      <Text style={styles.checkoutButtonText}>Checkout</Text>
-    </TouchableOpacity>
+    <Link href={`/review`}asChild>
+      <TouchableOpacity style={styles.checkoutButton} onPress={handleCheckout}>
+        <Text style={styles.checkoutButtonText}>Pay</Text>
+      </TouchableOpacity>
+    </Link>
     <StatusBar style={Platform.OS === 'ios' ? 'light' : 'auto'} />
   </View>
   );
@@ -47,7 +51,7 @@ const styles = StyleSheet.create({
     bottom: 20, // Raise the button up 20 pixels from the bottom
     left: 0,
     right: 0,
-    backgroundColor: '#1E90FF', // A prominent button color
+    backgroundColor: Colors.light.tint, // A prominent button color
     padding: 15,
     borderRadius: 5,
     alignItems: 'center',
