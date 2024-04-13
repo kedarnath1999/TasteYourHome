@@ -22,7 +22,7 @@ const AdminFoodItem = ({ product }) => {
       </View>
 
       {/* Image */}
-      <Image source={{ uri: product.imageUri }} style={styles.image} />
+      <Image source={{ uri: product.imageUri }} style={styles.image} resizeMode="contain"/>
 
       {/* Ratings and Price */}
       <View style={styles.details}>

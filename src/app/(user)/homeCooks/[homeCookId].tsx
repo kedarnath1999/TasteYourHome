@@ -1,6 +1,7 @@
 import { StyleSheet, Text, View, Image,ScrollView } from 'react-native';
 import { Stack, useLocalSearchParams } from 'expo-router';
 import FoodItem from 'src/components/FoodItem';
+import products from 'assets/data/products';
 
 const foodList = () => {
   const {homeCookId} = useLocalSearchParams()
@@ -13,7 +14,7 @@ const foodList = () => {
 
   return (
     <ScrollView contentContainerStyle={styles.container}>
-      {foodItems.map((product) => (
+      {products.map((product) => (
         <FoodItem key={product.id} product={product} />
       ))}
     </ScrollView>
