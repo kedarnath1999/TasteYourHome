@@ -21,7 +21,7 @@ const FoodItem = ({ product }) => {
       </View>
 
       {/* Image */}
-      <Image source={{ uri: product.imageUri }} style={styles.image} />
+      <Image source={{ uri: product.imageUri }} style={styles.image}  resizeMode="contain"/>
 
       {/* Ratings and Price */}
       <View style={styles.details}>
@@ -75,7 +75,7 @@ const styles = StyleSheet.create({
     },
     image: {
       width: '100%',
-      height: 150,
+      height: 200,
     },
     details: {
       flexDirection: 'row',

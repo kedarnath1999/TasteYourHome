@@ -176,7 +176,7 @@ const styles = StyleSheet.create({
   },
   checkoutButton: {
     // General button styles (used for the Create/Update button)
-    backgroundColor: Colors.light.tint, // Use your theme color
+    backgroundColor: Colors.light.primary, // Use your theme color
     paddingVertical: 12,
     paddingHorizontal: 25,
     borderRadius: 5,
