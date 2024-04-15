@@ -47,9 +47,9 @@ export default function TabLayout() {
         }}
       />
       <Tabs.Screen
-        name="three"
+        name="register"
         options={{
-          title: 'Users',
+          title: 'Register as home cook',
           tabBarIcon: ({ color }) => <TabBarIcon name="user" color={color} />,
         }}
       />
