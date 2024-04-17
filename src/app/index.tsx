@@ -15,19 +15,20 @@ const Index = () => {
     return <Redirect href={'/sign-in'}/>
   }
   return (
-    <View style={{ flex: 1, justifyContent: 'center', padding: 10,gap:10 }}>
-      {/* Use React Native's Button component */}
-      <Link href={'/(user)'} style={{ marginBottom: 10 }} asChild>
-          <Button title="User" onPress={() => {}} />
-      </Link>
-      <Link href={'/(admin)'} asChild>
-          <Button title="Admin" onPress={() => {}} />
-      </Link>
-      <Link href={'/sign-in'} asChild>
-          <Button title="sign-in" onPress={() => {}} />
-      </Link>
-        <Button title="sign-out" onPress={() => {supabase.auth.signOut()}} />
-    </View>
+    <Redirect href={`/(user)`}/>
+    // <View style={{ flex: 1, justifyContent: 'center', padding: 10,gap:10 }}>
+    //   {/* Use React Native's Button component */}
+    //   <Link href={'/(user)'} style={{ marginBottom: 10 }} asChild>
+    //       <Button title="User" onPress={() => {}} />
+    //   </Link>
+    //   <Link href={'/(admin)'} asChild>
+    //       <Button title="Admin" onPress={() => {}} />
+    //   </Link>
+    //   <Link href={'/sign-in'} asChild>
+    //       <Button title="sign-in" onPress={() => {}} />
+    //   </Link>
+    //     <Button title="sign-out" onPress={() => {supabase.auth.signOut()}} />
+    // </View>
   );
 };
 
