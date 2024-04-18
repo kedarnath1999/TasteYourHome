@@ -1,22 +1,43 @@
 import React, { useState } from 'react';
 import { StyleSheet, Text, TextInput, View, Button, Alert } from 'react-native';
+import { useNavigation } from '@react-navigation/native';
+import { supabase } from 'src/lib/supabase';
+import { useAuth } from 'src/providers/AuthProvider';
 
 export default function RegisterHomeCook() {
   const [cuisine, setCuisine] = useState('');
   const [foodItems, setFoodItems] = useState('');
   const [location, setLocation] = useState('');
   const [contactDetails, setContactDetails] = useState('');
+  const { session,fetchSession } = useAuth();
+  const navigation = useNavigation();
 
-  const handleSubmit = () => {
-    // Placeholder for submission logic
-    // Here you might want to validate the inputs or send them to your backend
-    Alert.alert("Registration Submitted", `Cuisine: ${cuisine}\nFood Items: ${foodItems}\nLocation: ${location}\nContact Details: ${contactDetails}`);
+
+  const handleSubmit = async () => {
+    try {
+      console.log(session,"kkkk")
+      const { data, error } = await supabase
+        .from('profiles')
+        .update({ group: 'ADMIN' })
+        .eq('id', session.user.id);
+
+      if (error) {
+        throw error;
+      }
+
+      console.log('Update successful:', data);
+      fetchSession()
+      navigation.navigate('index');  // Use the correct route name
+    } catch (error) {
+      console.error('Update error:', error);
+      Alert.alert("Error", error.message);
+    }
   };
-
+  
+  console.log(session,";;;;;;;;;;;;")
   return (
     <View style={styles.container}>
       <Text style={styles.title}>Register as a Home Cook</Text>
-      
       <TextInput
         style={styles.input}
         placeholder="Cuisine (e.g., Italian, Indian)"
@@ -31,21 +52,18 @@ export default function RegisterHomeCook() {
         onChangeText={setFoodItems}
         multiline
       />
-      
       <TextInput
         style={styles.input}
         placeholder="Location (e.g., New York, Mumbai)"
         value={location}
         onChangeText={setLocation}
       />
-      
       <TextInput
         style={styles.input}
         placeholder="Contact Details (e.g., email, phone)"
         value={contactDetails}
         onChangeText={setContactDetails}
       />
-      
       <Button
         title="Submit"
         onPress={handleSubmit}

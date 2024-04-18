@@ -5,12 +5,19 @@ import { Link, Tabs } from 'expo-router';
 import { Pressable } from "react-native";
 import Colors from "src/constants/Colors";
 import { useCart } from "src/providers/CartProvider";
+import { useAuth } from "src/providers/AuthProvider";
+import { Redirect } from "expo-router";
 
 export default function homeCooksLayout() {
 
   const {items} = useCart();
+  const {session} = useAuth();
+
+  if(!session){
+    return <Redirect href={'/'}/>
+  }
+
   const numberOfItems = items.length
-  console.log(items.length)
     return (
       <Stack
       screenOptions={{
