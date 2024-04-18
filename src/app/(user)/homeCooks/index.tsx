@@ -4,7 +4,7 @@ import Card from "../../../components/Card"
 import homeCooks from 'assets/data/homeCooks';
 
 
-export default function TabOneScreen() {
+export default function HomeCooksScreen() {
   return (
     <View style={styles.container}>
       <FlatList 
