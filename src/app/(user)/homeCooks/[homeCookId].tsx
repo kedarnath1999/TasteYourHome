@@ -8,11 +8,14 @@ const foodList = () => {
 
 
   return (
-    <ScrollView contentContainerStyle={styles.container}>
-      {products.map((product) => (
-        <FoodItem key={product.id} product={product} />
-      ))}
-    </ScrollView>
+    <View>
+      <Stack.Screen options={{title:"Food menue"}} />
+      <ScrollView contentContainerStyle={styles.container}>
+        {products.map((product) => (
+          <FoodItem key={product.id} product={product} />
+        ))}
+      </ScrollView>
+    </View>
   );
 };
 
