@@ -6,18 +6,16 @@ import products from 'assets/data/products';
 const foodList = () => {
   const {homeCookId} = useLocalSearchParams()
 
-  const foodItems = [
-    { id: '1',tag:'pizza',ratings:4.3, title: 'Pizza', imageUri: 'https://notjustdev-dummy.s3.us-east-2.amazonaws.com/food/extravaganzza.png', price:"2.5" },
-    { id: '2',tag:'not pizza',ratings:4.3, title: 'Burger', imageUri: 'https://notjustdev-dummy.s3.us-east-2.amazonaws.com/food/extravaganzza.png', price: "2.3" },
-    // Add more items...
-  ];
 
   return (
-    <ScrollView contentContainerStyle={styles.container}>
-      {products.map((product) => (
-        <FoodItem key={product.id} product={product} />
-      ))}
-    </ScrollView>
+    <View>
+      <Stack.Screen options={{title:"Food menue"}} />
+      <ScrollView contentContainerStyle={styles.container}>
+        {products.map((product) => (
+          <FoodItem key={product.id} product={product} />
+        ))}
+      </ScrollView>
+    </View>
   );
 };
 
