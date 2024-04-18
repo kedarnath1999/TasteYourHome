@@ -8,7 +8,7 @@ export default function homeCooksLayout() {
     return (
         <Stack>
             <Stack.Screen 
-              name="[homeCookId]"
+              name="Food List"
               options={{
                 title: 'Menu List',
                 headerRight: () => (
