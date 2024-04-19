@@ -5,6 +5,7 @@ import * as ImagePicker from 'expo-image-picker';
 import { useLocalSearchParams, useRouter } from 'expo-router';
 import { Stack } from 'expo-router';
 import { AntDesign } from '@expo/vector-icons';
+import { useInsertProduct } from 'src/api/products';
 
 
 const CreateScreen = () => {
@@ -17,6 +18,8 @@ const CreateScreen = () => {
 
   const {id} = useLocalSearchParams();
   const isUpdating = !!id;
+
+  const {mutate:insertProduct} = useInsertProduct()
 
   const onSubmit = () => {
     if(isUpdating){
@@ -57,6 +60,8 @@ const CreateScreen = () => {
     setName('');
     setPrice('');
     setImage('');
+
+    insertProduct({name,price: parseFloat(price),image})
     router.back();
   };
 
