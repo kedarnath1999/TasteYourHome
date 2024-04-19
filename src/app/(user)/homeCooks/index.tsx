@@ -2,6 +2,7 @@ import { StyleSheet, Text, View, ScrollView, FlatList} from 'react-native';
 import EditScreenInfo from '../../../components/EditScreenInfo';
 import Card from "../../../components/Card"
 import homeCooks from 'assets/data/homeCooks';
+import { useEffect } from 'react';
 
 
 export default function HomeCooksScreen() {
